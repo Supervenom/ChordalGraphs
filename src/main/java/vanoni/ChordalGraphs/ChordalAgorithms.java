@@ -7,8 +7,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
 
 public class ChordalAgorithms {
 
-	@SuppressWarnings("unused")
-	private void ChordalAlgorithms() {
+	private ChordalAgorithms() {
 	}
 	
 	public static void maximumCardinalitySearch(UndirectedGraph<Vertex,Integer> graph) {
