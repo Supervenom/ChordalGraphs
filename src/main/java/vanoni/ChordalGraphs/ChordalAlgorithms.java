@@ -5,15 +5,20 @@ import java.util.List;
 
 import edu.uci.ics.jung.graph.UndirectedGraph;
 
-public class ChordalAgorithms {
+public class ChordalAlgorithms {
+	
+	private List<Vertex> order;
 
-	private ChordalAgorithms() {
+	public ChordalAlgorithms() {
+		
+		order = new LinkedList<>();
+		
 	}
 	
-	public static void maximumCardinalitySearch(UndirectedGraph<Vertex,Integer> graph) {
+	public void maximumCardinalitySearch(UndirectedGraph<Vertex,Integer> graph) {
 		
 		List<List<Vertex>> set = new LinkedList<>();
-		List<Vertex> order = new LinkedList<>();
+		
 		
 		int i,j = 0;
 		

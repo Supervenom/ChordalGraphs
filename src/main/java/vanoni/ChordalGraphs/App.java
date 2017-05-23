@@ -36,7 +36,8 @@ public class App
         			graph.addEdge(new Integer(k), vertices.get(i), vertices.get(j));
         			k++;
         		}
-        ChordalAgorithms.maximumCardinalitySearch(graph);
+        ChordalAlgorithms a = new ChordalAlgorithms();
+        a.maximumCardinalitySearch(graph);
         System.out.println(graph);  				
         		
     }
