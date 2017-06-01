@@ -11,10 +11,12 @@
 \usepackage{tikz}
 \usepackage{bm}
 \usepackage{animate}
+\usepackage[absolute,overlay]{textpos}
 \usetikzlibrary{automata,positioning,arrows.meta}
 \setbeamertemplate{navigation symbols}{}
 \useoutertheme{split}
 \usepackage{ae,aecompl}
+\usepackage{algorithmic}
 \deftranslation[to=italian]{Definition}{Definizione}
 \deftranslation[to=italian]{Examples}{Esempi}
 \deftranslation[to=italian]{Example}{Esempio}
@@ -584,7 +586,7 @@ Example
 \begin_deeper
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1154,11 +1156,7 @@ Esempi
 \end_layout
 
 \begin_layout Plain Layout
-Pseudo codice
-\end_layout
-
-\begin_layout Plain Layout
-Applicazioni
+Applicazioni o parallelismo
 \end_layout
 
 \end_inset
@@ -1187,6 +1185,304 @@ Testing chordality - complexity analysis
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{textblock}{50}(7.7,2.1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+FOR{$i=0$ 
+\backslash
+TO $n-1$ } {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $set[i]:=
+\backslash
+varnothing$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+FORALL{ $v$ in $V$} {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $size[v]:=0;
+\backslash
+,set[0]:=set[0]
+\backslash
+cup
+\backslash
+{v
+\backslash
+}$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE $j:=0$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+FOR {$i=1$ 
+\backslash
+TO $n$ } {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $v:=$ delete any node from $set[j]$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $
+\backslash
+alpha [v]:=i;
+\backslash
+,
+\backslash
+alpha^{-1} [i]:=v;
+\backslash
+,size[v]:=-1$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+FORALL {$(u,v)
+\backslash
+in E$ and $size[u]
+\backslash
+geq 0$} {
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+STATE delete $u$ from $set[size[u]]$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+STATE $size[u]:=size[u]+1$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+STATE $set[size[u]]:=set[size[u]]
+\backslash
+cup 
+\backslash
+{u
+\backslash
+}$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+ENDFOR }
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $j:=j+1$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+WHILE {$j
+\backslash
+geq 0$ and $set[j]=
+\backslash
+varnothing$} {
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+STATE $j:=j-1$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+ENDWHILE
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{textblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{textblock}{6}(1,2.1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Complexity of the algorithm that computes the MCS ordering is 
+\begin_inset Formula $\mathcal{O}(n+m)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The first two for loops are 
+\begin_inset Formula $\mathcal{O}(n)$
+\end_inset
+
+.
+ The third is also 
+\begin_inset Formula $\mathcal{O}(n)$
+\end_inset
+
+ but there are inner loops.
+ However in the first one every edge is scanned at most twice, while the
+ second one is executed at most 
+\begin_inset Formula $n$
+\end_inset
+
+ times yielding a total cost of the outer loop of 
+\begin_inset Formula $\mathcal{O}(n+m)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{textblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1364,6 +1660,254 @@ Computing the fill-in - complexity analysis
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{textblock}{50}(7.5,3.2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+FOR{$i=n$ 
+\backslash
+TO $1$ } {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $w:=
+\backslash
+alpha^{-1}[i]$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $f[w]:=w$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+STATE $index[w]:=i$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+FORALL {$v
+\backslash
+in V$ s.t.
+ $(v,w)
+\backslash
+in E$ and $
+\backslash
+alpha [v]>i$} {
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+STATE $x:=v$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+WHILE {$index[x]>i$} {
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+STATE $index[x]:=i$
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+STATE add $(x,w)$ to $E
+\backslash
+cup F(
+\backslash
+alpha)$
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+STATE $x:=f[x]$
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\backslash
+ENDWHILE
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+IF {$f[x]=x$} {
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+STATE $f[x]:=w$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+ENDIF }
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+ENDFOR }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{textblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{textblock}{6}(1,2.8)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Complexity of the algorithm that computes the fill-in of a graph 
+\begin_inset Formula $G$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{O}(n+m')$
+\end_inset
+
+ where 
+\begin_inset Formula $m'=|E\cup F(\alpha)|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The outer loop is executed 
+\begin_inset Formula $n$
+\end_inset
+
+ times.
+ The inner one is scans each vertex of the elimination graph at most twice
+ yielding a total cost of the outer loop of 
+\begin_inset Formula $\mathcal{O}(n+m')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{textblock}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Implementation
 \end_layout
