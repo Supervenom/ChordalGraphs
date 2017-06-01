@@ -5,6 +5,8 @@ public class Vertex {
 	private int alpha;
 	private int size;
 	private int id;
+	private int index;
+	private Vertex follower;
 	private static int count = 0;
 
 	public Vertex() {
@@ -38,6 +40,34 @@ public class Vertex {
 	 */
 	public void setSize(int size) {
 		this.size = size;
+	}
+
+	/**
+	 * @return the follower
+	 */
+	public Vertex getFollower() {
+		return follower;
+	}
+
+	/**
+	 * @param follower the follower to set
+	 */
+	public void setFollower(Vertex follower) {
+		this.follower = follower;
+	}
+
+	/**
+	 * @return the index
+	 */
+	public int getIndex() {
+		return index;
+	}
+
+	/**
+	 * @param index the index to set
+	 */
+	public void setIndex(int index) {
+		this.index = index;
 	}
 
 	@Override
