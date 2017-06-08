@@ -1,10 +1,12 @@
 package vanoni.chordalGraphs;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
 import edu.uci.ics.jung.graph.UndirectedGraph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
+import edu.uci.ics.jung.io.PajekNetWriter;
 
 public class ChordalAlgorithms {
 	
@@ -77,7 +79,7 @@ public class ChordalAlgorithms {
 					x = v;
 					while (x.getIndex() > i) {
 						x.setIndex(i);
-						if (graph.findEdge(x, w) == null)
+						if (graph.findEdge(x, w) == null && x != w)
 							return false;//augmentedGraph.addEdge(augmentedGraph.getEdgeCount()+10000, x, w);//
 						x = x.getFollower();
 					}
