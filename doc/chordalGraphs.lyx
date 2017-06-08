@@ -2090,6 +2090,90 @@ isChordal():boolean
 status open
 
 \begin_layout Plain Layout
+Testing environment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+JVM
+\series default
+: Oracle 1.8.0_111-b14
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+OS
+\series default
+: Ubuntu 15.10
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Linux kernel
+\series default
+: 4.2.0-42-generic
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+libc
+\series default
+: glibc 2.21
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+System architecture
+\series default
+: x86_64
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+CPU
+\series default
+: Intel Core i7-2600K CPU @ 3.40GHz
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Memory
+\series default
+: 8 GB
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Profiling
 \end_layout
 
@@ -2101,11 +2185,8 @@ Profiling
 \begin_deeper
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="6">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2121,46 +2202,13 @@ Dataset
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-n
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-m
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-mcs() time
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-isChordal() time
+n+m
 \end_layout
 
 \end_inset
@@ -2182,34 +2230,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+YeastChordal
 \end_layout
 
 \end_inset
@@ -2218,7 +2239,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+126084
 \end_layout
 
 \end_inset
@@ -2227,7 +2248,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+345 ms
 \end_layout
 
 \end_inset
@@ -2238,34 +2259,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+PGPChordal
 \end_layout
 
 \end_inset
@@ -2274,7 +2268,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+192058
 \end_layout
 
 \end_inset
@@ -2283,7 +2277,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+586 ms
 \end_layout
 
 \end_inset
@@ -2294,34 +2288,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+DaysAllChordal
 \end_layout
 
 \end_inset
@@ -2330,7 +2297,7 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3633968
 \end_layout
 
 \end_inset
@@ -2339,13 +2306,31 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+18s 166 ms
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename img/plot.eps
+	lyxscale 10
+	scale 50
 
 \end_inset
 
