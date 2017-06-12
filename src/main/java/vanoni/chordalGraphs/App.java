@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 import com.google.common.base.Supplier;
 
+import edu.uci.ics.jung.algorithms.filters.KNeighborhoodFilter;
 import edu.uci.ics.jung.graph.UndirectedGraph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
 import edu.uci.ics.jung.io.PajekNetReader;
@@ -21,23 +22,23 @@ public class App
     public static void main( String[] args )
     {
     	boolean isChordal;
-    	String s;
-    	Scanner scanner = new Scanner(System.in);
+    	//String s;
+    	//Scanner scanner = new Scanner(System.in);
     	App app = new App();
-        ChordalAlgorithms a = new ChordalAlgorithms(app.read());
-        System.out.println("pronto");
-        s = scanner.nextLine();
+        ChordalAlgorithms a = new ChordalAlgorithms(app.read(args[0]));
+        //System.out.println("pronto");
+        //s = scanner.nextLine();
         a.maximumCardinalitySearch();
         isChordal = a.isChordal();
-        System.out.println("finito");
-        s = scanner.nextLine();
+        //System.out.println("finito");
+        //s = scanner.nextLine();
         System.out.println(isChordal);
         		
     }
     
-    public UndirectedGraph<Vertex, Integer> read() {
+    public UndirectedGraph<Vertex, Integer> read(String name) {
     	
-    	InputStream is = this.getClass().getClassLoader().getResourceAsStream("YeastChordal.net");
+    	InputStream is = this.getClass().getClassLoader().getResourceAsStream(name);
 		BufferedReader br = new BufferedReader( new InputStreamReader( is ));
 		
 		try {
@@ -64,8 +65,16 @@ public class App
             new PajekNetReader<>(vertexFactory, edgeFactory);
         
         final UndirectedGraph<Vertex,Integer> graph = new UndirectedSparseGraph<>();
-        
         pnr.load(br, graph);
+        /*Vertex v = null;
+        for (Vertex vertex: graph.getVertices()) {
+        	v = vertex;
+        	break;
+        }
+        KNeighborhoodFilter<Vertex, Integer> filter = new KNeighborhoodFilter<Vertex, Integer>(v, 3, KNeighborhoodFilter.EdgeType.IN_OUT);
+        UndirectedGraph<Vertex,Integer> graph2 = (UndirectedGraph<Vertex, Integer>) filter.apply(graph);
+        System.out.println(graph2.getEdgeCount());
+        System.out.println(graph2.getVertexCount());*/
         return graph;
     }
 }

@@ -60,13 +60,13 @@ public class ChordalAlgorithms {
 		
 		int n = graph.getVertexCount(),i;
 		Vertex w,x;
-		UndirectedGraph<Vertex,Integer> augmentedGraph = new UndirectedSparseGraph<>();
+		/*UndirectedGraph<Vertex,Integer> augmentedGraph = new UndirectedSparseGraph<>();
 		
 		for (Vertex v: graph.getVertices())
 			augmentedGraph.addVertex(v);
 		
 		for (Integer in: graph.getEdges())
-			augmentedGraph.addEdge(in, graph.getEndpoints(in).getFirst(), graph.getEndpoints(in).getSecond());
+			augmentedGraph.addEdge(in, graph.getEndpoints(in).getFirst(), graph.getEndpoints(in).getSecond());*/
 		
 		
 		for (i = n-1; i >= 0; i--) {
@@ -80,7 +80,7 @@ public class ChordalAlgorithms {
 					while (x.getIndex() > i) {
 						x.setIndex(i);
 						if (graph.findEdge(x, w) == null && x != w)
-							return false;//augmentedGraph.addEdge(augmentedGraph.getEdgeCount()+10000, x, w);//
+							return false;//augmentedGraph.addEdge(augmentedGraph.getEdgeCount()+100000, x, w);//
 						x = x.getFollower();
 					}
 					
@@ -91,9 +91,8 @@ public class ChordalAlgorithms {
 		}
 		/*PajekNetWriter<Vertex, Integer> wr = new PajekNetWriter<>();
 		try {
-			wr.save(augmentedGraph, "PGPchordal.net");
+			wr.save(augmentedGraph, "MiniDaysAllChordal.net");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
 		return true;

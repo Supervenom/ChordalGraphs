@@ -2215,6 +2215,7 @@ Profiling
 \begin_layout Standard
 
 \series bold
+\size footnotesize
 Total time
 \series default
  is the actual time spent by the application to execute the two methods
@@ -2232,13 +2233,17 @@ isChordal()
 ChordalAlgorithms
 \family default
  was already filled in with the graph read from file.
+ Seven tests were executed for each dataset.
 \end_layout
 
 \begin_layout Standard
 \align center
+
+\size scriptsize
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="5" columns="4">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2249,6 +2254,7 @@ ChordalAlgorithms
 \begin_layout Plain Layout
 
 \series bold
+\size scriptsize
 Dataset
 \end_layout
 
@@ -2260,6 +2266,7 @@ Dataset
 \begin_layout Plain Layout
 
 \series bold
+\size scriptsize
 n+m
 \end_layout
 
@@ -2271,7 +2278,20 @@ n+m
 \begin_layout Plain Layout
 
 \series bold
-Total time
+\size scriptsize
+Total average time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Total minimum time
 \end_layout
 
 \end_inset
@@ -2282,6 +2302,8 @@ Total time
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 YeastChordal
 \end_layout
 
@@ -2291,6 +2313,8 @@ YeastChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 126547
 \end_layout
 
@@ -2300,7 +2324,20 @@ YeastChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
-345 ms
+
+\size scriptsize
+328 ms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+282 ms
 \end_layout
 
 \end_inset
@@ -2311,6 +2348,8 @@ YeastChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 PGPChordal
 \end_layout
 
@@ -2320,6 +2359,8 @@ PGPChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 192058
 \end_layout
 
@@ -2329,7 +2370,66 @@ PGPChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
-586 ms
+
+\size scriptsize
+608 ms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+569 ms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MiniDaysAllChordal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+2157699
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+9s 572 ms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+9 s 711 ms
 \end_layout
 
 \end_inset
@@ -2340,6 +2440,8 @@ PGPChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 DaysAllChordal
 \end_layout
 
@@ -2349,6 +2451,8 @@ DaysAllChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 3633865
 \end_layout
 
@@ -2358,7 +2462,20 @@ DaysAllChordal
 \begin_inset Text
 
 \begin_layout Plain Layout
-18s 166 ms
+
+\size scriptsize
+19s 209 ms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+18 s 103 ms
 \end_layout
 
 \end_inset
@@ -2376,7 +2493,7 @@ DaysAllChordal
 \begin_inset Graphics
 	filename img/plot.eps
 	lyxscale 10
-	scale 40
+	scale 38
 
 \end_inset
 
@@ -2671,6 +2788,20 @@ PRAM CRCW (randomized)
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+bib
+\end_layout
+
+\begin_layout Plain Layout
+parallel
+\end_layout
 
 \end_inset
 
