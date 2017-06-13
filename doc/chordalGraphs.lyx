@@ -52,7 +52,7 @@
 \maintain_unincluded_children false
 \language american
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "lmodern" "default"
 \font_sans "lmss" "default"
@@ -131,7 +131,7 @@ Politecnico di Milano
 \end_layout
 
 \begin_layout Date
-23 May 2017
+13 June 2017
 \end_layout
 
 \begin_layout Section
@@ -1925,29 +1925,59 @@ Language and libraries
 
 \begin_deeper
 \begin_layout Itemize
-JavaSE 8 was used to implement the algorithm.
+
+\series bold
+JavaSE 8
+\series default
+ was used to implement the algorithm.
 \end_layout
 
 \begin_layout Itemize
-Graph data structures were provided by JUNG library and graphs were stored
- in PajekNet format.
+Graph data structures were provided by 
+\series bold
+JUNG
+\series default
+ library and graphs were stored in 
+\series bold
+PajekNet
+\series default
+ format.
 \end_layout
 
 \begin_layout Itemize
-Apache Maven was used to handle the project.
+
+\series bold
+Apache Maven
+\series default
+ was used to handle the project.
 \end_layout
 
 \begin_layout Itemize
-Eclipse was used as IDE.
+
+\series bold
+Eclipse
+\series default
+ was used as IDE.
 \end_layout
 
 \begin_layout Itemize
-The code is released under GPL 3 license.
+The code is released under 
+\series bold
+GPL 3
+\series default
+ license.
 \end_layout
 
 \begin_layout Itemize
-Oracle Java Mission Control with Flight Recorder was used to profile the
- application.
+
+\series bold
+Oracle Java Mission Control
+\series default
+ with 
+\series bold
+Flight Recorder
+\series default
+ was used to profile the application.
 \end_layout
 
 \end_deeper
@@ -2012,6 +2042,20 @@ index:int
 
 \family typewriter
 follower:Vertex
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2169,7 +2213,30 @@ Datasets
 
 \begin_deeper
 \begin_layout Itemize
-I chose to use real networks data to test the algorithms.
+I chose to use 
+\series bold
+real networks
+\series default
+ data to test the algorithms
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+http://vlado.fmf.uni-lj.si/pub/networks/data/
+\family default
+; M.
+ Boguña, R.
+ Pastor-Satorras, A.
+ Diaz-Guilera and A.
+ Arenas, Physical Review E, vol.
+ 70, 056122 (2004)
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -2548,7 +2615,7 @@ Parallel versions of the algorithm
 
 \begin_deeper
 \begin_layout Standard
-Recognizing is in the complexity class 
+Recognizing chordal graphs is in the complexity class 
 \series bold
 NC
 \series default
@@ -2578,6 +2645,8 @@ zation of chordal graphs.
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Authors
 \end_layout
 
@@ -2587,6 +2656,8 @@ Authors
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Complexity
 \end_layout
 
@@ -2596,6 +2667,8 @@ Complexity
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Number of processors
 \end_layout
 
@@ -2605,6 +2678,8 @@ Number of processors
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Cost model
 \end_layout
 
@@ -2792,20 +2867,6 @@ PRAM CRCW (randomized)
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-bib
-\end_layout
-
-\begin_layout Plain Layout
-parallel
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2813,5 +2874,41 @@ parallel
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bibliografia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "ChordalGraphs"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
