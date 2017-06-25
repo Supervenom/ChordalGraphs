@@ -47,6 +47,7 @@
 }
 \setbeamersize{text margin left=1cm,text margin right=1cm} 
 \end_preamble
+\options handout
 \use_default_options false
 \maintain_unincluded_children false
 \language american
@@ -133,6 +134,49 @@ Politecnico di Milano
 14 June 2017
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Many problems are in general 
+\series bold
+NP
+\series default
+-hard for graphs.
+ For example find Hamiltonian cycles or maximal cliques.
+\end_layout
+
+\begin_layout Itemize
+On particular classes of graphs though these problems can become low-degree
+ polynomial.
+\end_layout
+
+\begin_layout Itemize
+Chordal graphs are one of those classes for which many 
+\series bold
+NP
+\series default
+-hard problems become low-degree polynomial (e.g.
+ maximal cliques).
+\end_layout
+
+\begin_layout Itemize
+At this point become important that testing chordality is itself low-degree
+ polynomial.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 The algorithm
 \end_layout
