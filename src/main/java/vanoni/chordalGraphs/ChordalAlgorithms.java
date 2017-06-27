@@ -8,11 +8,18 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
 import edu.uci.ics.jung.graph.UndirectedSparseGraph;
 import edu.uci.ics.jung.io.PajekNetWriter;
 
+/**
+ * This is a class that contains methods and data structures to handle chordality testing.
+ */
 public class ChordalAlgorithms {
 	
 	private List<Vertex> order;
 	private UndirectedGraph<Vertex,Integer> graph;
 
+	/**
+	 * Constructs the object that tests the chordality of a graph.
+	 * @param graph The graph which will be tested.
+	 */
 	public ChordalAlgorithms(UndirectedGraph<Vertex,Integer> graph) {
 		
 		order = new LinkedList<>();
@@ -20,6 +27,9 @@ public class ChordalAlgorithms {
 		
 	}
 	
+	/**
+	 * Computes an order on the graph. It is necessary for the chordality testing.
+	 */
 	public void maximumCardinalitySearch() {
 		
 		List<List<Vertex>> set = new LinkedList<>();
@@ -56,6 +66,10 @@ public class ChordalAlgorithms {
 		
 	}
 	
+	/**
+	 * @return @true if the graph by which was filled in the constructor is chordal.
+	 *  Beware! You have to call @maximumCardinalitySearch first to compute the order!
+	 */
 	public boolean isChordal() {
 		
 		int n = graph.getVertexCount(),i;
